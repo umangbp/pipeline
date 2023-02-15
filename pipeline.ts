@@ -17,7 +17,7 @@ const ProductResultSchema = z.object({
 type ProductData = z.infer<typeof ProductSchema>;
 type ProductResult = z.infer<typeof ProductResultSchema>;
 
-function main(
+export function main(
   productData: ProductData[],
   includeTags: string[],
   excludeTags: string[]

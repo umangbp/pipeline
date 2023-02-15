@@ -10,7 +10,7 @@
         "go": "ts-node ./pipeline.ts ./product_data.json --include medium,large --exclude red,blue",
         "lint": "eslint . --ext .ts --quiet",
         "pretest": "npm run lint",
-        "test": "echo 'I wonder what this does 👀'"
+        "test": "mocha --extension ts --recursive test/*.spec.ts "
     },
     "dependencies": {
         "argparse": "^2.0.1",
@@ -21,11 +21,15 @@
     },
     "devDependencies": {
         "@types/argparse": "^2.0.10",
+        "@types/chai": "^4.3.4",
         "@types/lodash": "^4.14.191",
+        "@types/mocha": "^10.0.1",
         "@types/node": "^18.13.0",
         "@typescript-eslint/eslint-plugin": "^5.46.1",
         "@typescript-eslint/parser": "^5.46.1",
+        "chai": "^4.3.7",
         "eslint": "^8.29.0",
+        "mocha": "^10.2.0",
         "prettier": "^2.8.1"
     }
 }
